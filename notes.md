@@ -21,11 +21,6 @@ i.e. they are unbiased and efficient
    
    Heteroskedasticity causes our coefficient estimates to be less precise. To test for homoskedasticity, we can use the Breusch-Pagan test, where the alternative hypothesis is that the homoskedasticity assumption does not hold. We can also opt to use robust standard errors in the presence of heteroskedasticity (given a sufficiently large sample).
 
-# Data Structures
-1. Cross-Sectional Data
-2. Time Series Data
-3. Panel Data
-
 # Time Series Analysis
 
 In applied time series analysis, we are concerned with the dynamic consequences of events over time. 
