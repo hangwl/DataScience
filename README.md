@@ -33,6 +33,18 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
    
    Heteroskedasticity causes our coefficient estimates to be less precise. To test for homoskedasticity, we can use the Breusch-Pagan test, where the alternative hypothesis is that the homoskedasticity assumption does not hold. We can also opt to use robust standard errors in the presence of heteroskedasticity (given a sufficiently large sample).
 
+## Addressing Endogeneities
+
+Possible Sources:
+- Omitted Variable Bias
+- Measurement Error
+- Selection Bias
+- Misspecification of Functional Form
+- Reverse Causality
+
+
+
+
 # Time Series Analysis
 
 In applied time series analysis, we are concerned with the dynamic consequences of events over time. We rely on the Box-Jenkins approach to generate time series forecasts.
@@ -78,8 +90,8 @@ ARIMA is useful when a structural model is inappropriate or unknown, where a str
 An ARMA model is a stationary model. If our model isn't stationary, we can achieve stationarity by taking a series of differenecs. The 'I' in ARIMA model stands for integrated i.e. it is a measure of how many non-seasonal differences are needed to achieve stationarity.
 
 We can use the graphs of ACF and PACF (autocorrelation and partial autocorrelation functions) to help us decide on the order of (p) and (q) for our AR(p) and MA(q) models.\
-see <https://www.kaggle.com/code/iamleonie/time-series-interpreting-acf-and-pacf>\
-see <https://people.duke.edu/~rnau/411arim3.htm>
+<https://www.kaggle.com/code/iamleonie/time-series-interpreting-acf-and-pacf>\
+<https://people.duke.edu/~rnau/411arim3.htm>
 
 General Guideline:
 
