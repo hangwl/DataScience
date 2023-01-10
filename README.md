@@ -1,7 +1,6 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+
 - [Regression Analysis](#regression-analysis)
-- [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
+  - [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
 - [Time Series Analysis](#time-series-analysis)
   - [Stationarity](#stationarity)
   - [Static Model](#static-model)
@@ -19,7 +18,7 @@ In regression analysis, we draw a random sample from a population and use it to 
 
 In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assumptions hold, OLS estimates are Best Linear Unbiased Estimators (BLUE), i.e. they are unbiased and efficient.
 
-# Gauss-Markov Assumptions:
+## Gauss-Markov Assumptions:
 1. Linearity in Parameters
 2. Random Sampling
 3. No Perfect Collinearity among Covariates
