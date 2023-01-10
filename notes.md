@@ -42,14 +42,14 @@ Under TS assumptions 1-5, OLS estimators are BLUE condiional on X.
 
 For time series data, the assumptions for strict exogeneity and no serial correlation are often unrealistic. We should note that if the homoskedasticity and/or autocorrelation assumptions are violated, the usual OLS estimators no longer minimize variance among all linear unbiased estimators. As a result, usual t and F tests become invalid.
 
-__Stationarity__
+### Stationarity
 
 In practice, we should always test the stationarity of time series data before running a regression model. If the time series data is not stationary, then we cannot run the regression model by using the raw data directly.
 
-  __Static Model__
+### Static Model
 
 In a static model, a change in X immediately affects y.
 
-__Finite Distributed Lags (FDL) Model__
+### Finite Distributed Lags (FDL) Model
 
 In a FDL model, we allow one or more variables to affect y with a lag. We specify our model to include n impact multipliers for an FDL of order n. The long run propensity is measured as the sum of the estimated coefficients associated with x and its lags.
