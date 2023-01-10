@@ -21,7 +21,7 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 
 # Time Series Analysis
 
-In applied time series analysis, we are concerned with the dynamic consequences of events over time. 
+In applied time series analysis, we are concerned with the dynamic consequences of events over time. We rely on the Box-Jenkins approach to generate time series forecasts.
 
 OLS can also be used to estimate time series data under similar assumptions:
 1. Linearity in Parameters
@@ -85,4 +85,37 @@ In an AR(p) model, the dependent variable at time t depends on its value in the 
 
 ### MovingAverage (MA) Process
 
-The moving average model is simply a linear combination of random error terms. Therefore, our dependent variable depends on the current and previous values of the random error terms, which are white noise..
+The moving average model is simply a linear combination of random error terms. Therefore, our dependent variable depends on the current and previous values of the random error terms, which are white noise.
+
+## Simple Forecast
+
+Suppose we know the true generating process, we can obtain a simple forecast for period t+1 via its respective forecast function. In j-step ahead forecasts, given that the forecast function yield a convergent sequence of forecasts, the conditional forecast of y_{t+j} converges to unconditional expectation.
+
+## Forecast Evaluation
+
+To evaluate our forecasts, we can apply a iterative scheme to use 90% of our observations to estimate the competing models. That is, we can easily calculated the 1-step ahead forecast errors for e_{t=91} since we already know the realization of y_{t=91}. We then do the same for t=92, t=93, ..., and obtain 10 forecast errors for our model(s).
+
+The evaluation criterion depends is subjective. Some examples are:
+* Mean Squared Error (MSE)
+* Mean Error (ME)
+* Mean Percentage Error (MPE)
+* Mean Absolute Error (MAE)
+* Mean Absolute Percentage Error (MAPE)
+
+## Box-Jenkins Approach
+
+The general time series forecast procedure is as follows:
+
+1. Identification
+   * consider stationarity
+     * if non-stationary, consider taking the (first) difference on our y variable
+       * see unit root tests
+     * if stationary, consider correlograms to decide models and order of lags
+2. Estimation
+   * if model cannot be decided in stage 1, use AIC (or BIC) criterion
+   * run regressions
+3. Diagnostic Checking
+   * we need to include AR and MA terms to ensure that the residual terms are effectively white noise
+     * the coefficients of the p and q lags must be significant, but the interim lags need not be (skip them if they are not useful)
+     * Test the residuals
+4. Forecasting (either 1-step ahead or j-step ahead)
