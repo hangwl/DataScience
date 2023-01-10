@@ -1,3 +1,18 @@
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Regression Analysis](#regression-analysis)
+- [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
+- [Time Series Analysis](#time-series-analysis)
+  - [Stationarity](#stationarity)
+  - [Static Model](#static-model)
+  - [Finite Distributed Lags (FDL) Model](#finite-distributed-lags-fdl-model)
+  - [AutoRegressive Integrated Moving Average (ARIMA) Model](#autoregressive-integrated-moving-average-arima-model)
+    - [AutoRegressive (AR) Process](#autoregressive-ar-process)
+    - [MovingAverage (MA) Process](#movingaverage-ma-process)
+  - [Simple Forecast](#simple-forecast)
+  - [Forecast Evaluation](#forecast-evaluation)
+  - [Box-Jenkins Approach](#box-jenkins-approach)
+
 # Regression Analysis
 
 In regression analysis, we draw a random sample from a population and use it to estimate the properties of that population. In our regression equation, the coefficients are estimates of the actual population parameters, which we would like to be the best such that they are unbiased and minimize discrepancies between data.
