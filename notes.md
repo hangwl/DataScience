@@ -45,7 +45,9 @@ For time series data, the assumptions for strict exogeneity and no serial correl
 
 ## Stationarity
 
-In practice, we should always test the stationarity of time series data before running a regression model. If the time series data is not stationary, then we cannot run the regression model by using the raw data directly.
+In practice, we should always test the stationarity of time series data before running a regression model. If the time series data is not stationary, then we cannot run the regression model by using the raw data directly as it will have a time-varying mean or time-varying variance or both. For example, exchange rates and housing prices are usually non-stationary.
+
+If a time series is not stationary, we can study its behavior only for the time period under consideration, and forecasts will have little practical value.
 
 ## Static Model
 
@@ -54,3 +56,29 @@ In a static model, a change in X immediately affects y.
 ## Finite Distributed Lags (FDL) Model
 
 In a FDL model, we allow one or more variables to affect y with a lag. We specify our model to include n impact multipliers for an FDL of order n. The long run propensity is measured as the sum of the estimated coefficients associated with x and its lags.
+
+## AutoRegressive Integrated Moving Average (ARIMA) Model
+
+ARIMA is useful when a structural model is inappropriate or unknown, where a structural model is trying to explain the changes in a variable by reference to the movements in the current and past values of other explanatory variables.
+
+An ARMA model is a stationary model. If our model isn't stationary, we can achieve stationarity by taking a series of differenecs. The 'I' in ARIMA model stands for integrated i.e. it is a measure of how many non-seasonal differences are needed to achieve stationarity.
+
+We can use the graphs of ACF and PACF (autocorrelation and partial autocorrelation functions) to help us decide on the order of (p) and (q) for our AR(p) and MA(q) models.\
+see <https://www.kaggle.com/code/iamleonie/time-series-interpreting-acf-and-pacf>
+see <https://people.duke.edu/~rnau/411arim3.htm>
+
+General Guideline:
+
+| Model     | ACF Patterns                                                      | PACF Patterns                                                     |
+|-----------|-------------------------------------------------------------------|-------------------------------------------------------------------|
+| AR(p)     | Decays exponentially and/or displays damped sine wave pattern     | Displays significant spikes through p lags (cuts off after lag p) |
+| MA(q)     | Displays significant spikes through q lags (cuts off after lag q) | Decays exponentially                                              |
+| ARMA(p,q) | Decays exponentially                                              | Decays exponentially                                              |
+
+### AutoRegressive (AR) Process
+
+In an AR(p) model, the dependent variable at time t depends on its value in the previous period(s) and a random error term.
+
+### MovingAverage (MA) Process
+
+The moving average model is simply a linear combination of random error terms. Therefore, our dependent variable depends on the current and previous values of the random error terms, which are white noise..
