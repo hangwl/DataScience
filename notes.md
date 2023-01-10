@@ -64,7 +64,7 @@ ARIMA is useful when a structural model is inappropriate or unknown, where a str
 An ARMA model is a stationary model. If our model isn't stationary, we can achieve stationarity by taking a series of differenecs. The 'I' in ARIMA model stands for integrated i.e. it is a measure of how many non-seasonal differences are needed to achieve stationarity.
 
 We can use the graphs of ACF and PACF (autocorrelation and partial autocorrelation functions) to help us decide on the order of (p) and (q) for our AR(p) and MA(q) models.\
-see <https://www.kaggle.com/code/iamleonie/time-series-interpreting-acf-and-pacf>
+see <https://www.kaggle.com/code/iamleonie/time-series-interpreting-acf-and-pacf>\
 see <https://people.duke.edu/~rnau/411arim3.htm>
 
 General Guideline:
@@ -74,6 +74,10 @@ General Guideline:
 | AR(p)     | Decays exponentially and/or displays damped sine wave pattern     | Displays significant spikes through p lags (cuts off after lag p) |
 | MA(q)     | Displays significant spikes through q lags (cuts off after lag q) | Decays exponentially                                              |
 | ARMA(p,q) | Decays exponentially                                              | Decays exponentially                                              |
+
+Akaike Information Criterion (AIC) and Schwarz Bayesian Criterion (BIC) are more sophisticated model-selection statistics widely used to determine if the ARMA(p,q) or AR(p) or MA(q) model is a good statistical fit. A smaller AIC (or BIC) indicates a better fitting model.
+
+We should note that although they usually give the same conclusion, BIC will tend to always select a more parsimonious model than the AIC.
 
 ### AutoRegressive (AR) Process
 
