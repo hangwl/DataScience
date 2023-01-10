@@ -7,13 +7,13 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 i.e. they are unbiased and efficient
 
 # Gauss-Markov Assumptions:
-1. Linearity in parameters
+1. Linearity in Parameters
 2. Random Sampling
-3. No perfect collinearity among covariates
+3. No Perfect Collinearity among Covariates
    
    If an independent variable is an exact linear combination of other independent variables, we say that the model suffers from perfect collinearity, and it cannot be estimated by OLS.
 
-4. Zero conditional Mean (Exogeneity)
+4. Zero Conditional Mean (Exogeneity)
    
    In general, we should expect error terms to be distributed around the mean of zero. If a key variable has been omitted, it can cause omitted variable bias since the omitted variable could be correlated with independent variables.
 
@@ -25,3 +25,22 @@ i.e. they are unbiased and efficient
 1. Cross-Sectional Data
 2. Time Series Data
 3. Panel Data
+
+# Time Series Analysis
+
+In applied time series analysis, we are concerned with the dynamic consequences of events over time. 
+
+OLS can also be used to estimate time series data under similar assumptions:
+1. Linearity in Parameters
+2. Zero Conditional Mean
+3. No Perfect Collinearity
+4. Homoskedasticity
+5. No Serial Correlation
+   
+   Conditional on X, the errors in two different time periods should be uncorrelated.
+
+Under TS assumptions 1-5, OLS estimators are BLUE condiional on X.
+
+6. Normality of Errors
+
+For time series data, the assumptions for strict exogeneity and no serial correlation are often unrealistic. We should note that if the homoskedasticity and/or autocorrelation assumptions are violated, the usual OLS estimators no longer minimize variance among all linear unbiased estimators. As a result, usual t and F tests become invalid.
