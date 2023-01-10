@@ -36,6 +36,7 @@ OLS can also be used to estimate time series data under similar assumptions:
    * We can use the Breusch-Godfrey (BG) Test as a general test for autocorrelation vs Durbin Watson (DW) test.
    * The BG test generalizes to any order autocorrelation, and allows the original regression model to contain lagged dependent variables.
    * To fix autocorrelation, we can use feasible generalized least squares (FGLS) instead of OLS, or include lagged dependent variables and lagged X. We should note that FGLS requires strictly exogenous explanatory variables, and should not be used when the explanatory variables include lagged dependent variables.
+
 Under TS assumptions 1-5, OLS estimators are BLUE condiional on X.
 
 1. Normality of Errors
