@@ -45,7 +45,7 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 
 4. Zero Conditional Mean (Exogeneity)
    
-   In general, we should expect error terms to be distributed around the mean of zero. If a key variable has been omitted, it can cause omitted variable bias since the omitted variable could be correlated with independent variables.
+   In general, we should expect error terms to be distributed around the mean of zero. If a key variable has been omitted, it can cause omitted variable bias (OVB) since the omitted variable could be correlated with independent variables.
 
    OVB Fixes:
       - introduce Proxy Variable
