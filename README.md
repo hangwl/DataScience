@@ -2,7 +2,6 @@
 - [Regression Analysis](#regression-analysis)
   - [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
   - [Binary Choice Models](#binary-choice-models)
-  - [Addressing Endogeneities](#addressing-endogeneities)
 - [Time Series Analysis](#time-series-analysis)
   - [Stationarity](#stationarity)
   - [Static Model](#static-model)
@@ -72,14 +71,6 @@ Typically, we deal with the following 3 types of data:
 
 ## Binary Choice Models
 
-## Addressing Endogeneities
-
-Possible Sources:
-- Omitted Variable Bias
-- Measurement Error
-- Selection Bias
-- Misspecification of Functional Form
-- Reverse Causality
 
 
 
