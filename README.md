@@ -82,7 +82,7 @@ To estimate the model, we always use heteroskedasticity-robust standard errors b
 
 ### Probit Model
 
-In a probit model, a cumulative standard normal density function can be used to model a binary response. THE CDF function will produce probabilities between 0 and 1. It is symmetric, smooth, and asymptotic along the probabilities of 0 and 1.
+In a probit model, a cumulative standard normal density function (CDF) can be used to model a binary response. The CDF function will produce probabilities between 0 and 1. It is symmetric, smooth, and asymptotic along the probabilities of 0 and 1.
 
 In a probit model, partial effects are not constant and will be related to values of its predictor variables.
 
