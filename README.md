@@ -47,6 +47,11 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
    
    In general, we should expect error terms to be distributed around the mean of zero. If a key variable has been omitted, it can cause omitted variable bias since the omitted variable could be correlated with independent variables.
 
+   OVB Fixes:
+      - introduce Proxy Variable
+      - introduce Instrumental Variable
+      - fixed effects regression in panel data
+
 5. Homoskedasticity (constant variance) of errors
    
    Heteroskedasticity causes our coefficient estimates to be less precise. To test for homoskedasticity, we can use the Breusch-Pagan test, where the alternative hypothesis is that the homoskedasticity assumption does not hold. We can also opt to use robust standard errors in the presence of heteroskedasticity (given a sufficiently large sample).
