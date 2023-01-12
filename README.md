@@ -28,14 +28,20 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
    To test this assumption, we can use a residual plot (predicted values vs actual values). Ideally, the points should lie on a diagonal 45degree line.
 
    Fixes:
-   - Adding polynomial terms
-   - Applying nonlinear transformations
-   - Adding additional variables
+      - Adding polynomial terms
+      - Applying nonlinear transformations
+      - Adding additional variables
 
 2. Random Sampling
 3. No Perfect Collinearity among Covariates
    
-   If an independent variable is an exact linear combination of other independent variables, we say that the model suffers from perfect collinearity, and it cannot be estimated by OLS.
+   If an independent variable is an exact linear combination of other independent variables, we say that the model suffers from perfect collinearity, and it cannot be estimated by OLS. In reality, a lot of data is naturally correlated. Multicollinearity is a problem in regression analysis since we can't hold correlated coefficients constant. Additionally, it increases the standard error of the coefficients, which results in them potentially showing as statistically insignificant when they might actually be significant.
+
+   To check for multicollinearity, we can visually inspect a correlation heatmap and examine the Variance Inflation Factor (VIF) of each predictor.
+
+   Fixes:
+      - Remove predictors with high VIF
+      - Perform dimensionality reduction
 
 4. Zero Conditional Mean (Exogeneity)
    
@@ -44,6 +50,15 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 5. Homoskedasticity (constant variance) of errors
    
    Heteroskedasticity causes our coefficient estimates to be less precise. To test for homoskedasticity, we can use the Breusch-Pagan test, where the alternative hypothesis is that the homoskedasticity assumption does not hold. We can also opt to use robust standard errors in the presence of heteroskedasticity (given a sufficiently large sample).
+
+   Fixes:
+      - Use Weighted Least Squares (WLS) or
+      - Transforming either dependent or highly skewed variables
+
+6. Normality of Error Terms (5-6)
+
+   We can plot the distribution of the error terms and use the Anderson-Darling test to check for normality, where a p-value < 0.05 implies non-normality.
+
 
 ## Binary Choice Models
 
