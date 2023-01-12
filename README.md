@@ -20,7 +20,7 @@ In regression analysis, we draw a random sample from a population and use it to 
 
 In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assumptions hold, OLS estimates are Best Linear Unbiased Estimators (BLUE), i.e. they are unbiased and efficient.
 
-In econometric analysis, we typically deal with 3 types of data:
+Typically, we deal with the following 3 types of data:
 - cross-sectional data
 - time series data
 - panel (longitudinal) data
