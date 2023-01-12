@@ -1,6 +1,8 @@
 
 - [Regression Analysis](#regression-analysis)
   - [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
+  - [Binary Choice Models](#binary-choice-models)
+  - [Addressing Endogeneities](#addressing-endogeneities)
 - [Time Series Analysis](#time-series-analysis)
   - [Stationarity](#stationarity)
   - [Static Model](#static-model)
@@ -20,6 +22,16 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 
 ## Gauss-Markov Assumptions:
 1. Linearity in Parameters
+   
+   This assumes a linear relationship between the y and X. If our model is misspecified, predictions will be inaccurate due to underfitting.
+
+   To test this assumption, we can use a residual plot (predicted values vs actual values). Ideally, the points should lie on a diagonal 45degree line.
+
+   Fixes:
+   - Adding polynomial terms
+   - Applying nonlinear transformations
+   - Adding additional variables
+
 2. Random Sampling
 3. No Perfect Collinearity among Covariates
    
@@ -32,6 +44,8 @@ In econometric analysis, OLS estimators are typical. Assuming Gauss-Markov Assum
 5. Homoskedasticity (constant variance) of errors
    
    Heteroskedasticity causes our coefficient estimates to be less precise. To test for homoskedasticity, we can use the Breusch-Pagan test, where the alternative hypothesis is that the homoskedasticity assumption does not hold. We can also opt to use robust standard errors in the presence of heteroskedasticity (given a sufficiently large sample).
+
+## Binary Choice Models
 
 ## Addressing Endogeneities
 
