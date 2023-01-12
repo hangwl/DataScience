@@ -2,6 +2,9 @@
 - [Regression Analysis](#regression-analysis)
   - [Gauss-Markov Assumptions:](#gauss-markov-assumptions)
   - [Binary Choice Models](#binary-choice-models)
+    - [Linear Probability Model](#linear-probability-model)
+    - [Probit Model](#probit-model)
+    - [Logit Model](#logit-model)
 - [Time Series Analysis](#time-series-analysis)
   - [Stationarity](#stationarity)
   - [Static Model](#static-model)
@@ -71,9 +74,27 @@ Typically, we deal with the following 3 types of data:
 
 ## Binary Choice Models
 
+### Linear Probability Model
 
+When our target variable is a binary dependent variable, the linear regression model is called a linear probability model (LPM). While it is simple to implement, the partial effects on any predictor variable is always constant, which is problematic.
 
+To estimate the model, we always use heteroskedasticity-robust standard errors because the homoskedasticity assumption is violated in a LPM.
 
+### Probit Model
+
+In a probit model, a cumulative standard normal density function can be used to model a binary response. THE CDF function will produce probabilities between 0 and 1. It is symmetric, smooth, and asymptotic along the probabilities of 0 and 1.
+
+In a probit model, partial effects are not constant and will be related to values of its predictor variables.
+
+We can obtain the partial effect for an 'average' person by plugging sample averages for X into our regression.
+
+### Logit Model
+
+In a logit model, a logistic function is used. 
+
+The estimators used are normally distributed as n tends to infinity. Comparatively, we can observe that a normal distribution has fatter tails than logit distributions.
+
+The CDFs of probit and logit functions are about linear between 0.2 - 0.8. As a result, many cases of LPM produces similar results as probit and logit models, except in the extreme values of the probabilities. Additionally, probit models reach 0 and 1 quicker than logit models.
 
 # Time Series Analysis
 
