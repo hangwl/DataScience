@@ -196,3 +196,5 @@ The general time series forecast procedure is as follows:
      * the coefficients of the p and q lags must be significant, but the interim lags need not be (skip them if they are not useful)
      * Test the residuals
 4. Forecasting (either 1-step ahead or j-step ahead)
+
+
