@@ -1,3 +1,4 @@
+# Machine Learning Process
 - [Machine Learning Process](#machine-learning-process)
 	- [Data Collection](#data-collection)
 		- [Questions to ask](#questions-to-ask)
@@ -29,8 +30,6 @@
 		- [Bias/Variance trade-off](#biasvariance-trade-off)
 	- [Model Deployment](#model-deployment)
 	- [Retraining](#retraining)
-
-# Machine Learning Process
 
 ## Data Collection
 
