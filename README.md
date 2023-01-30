@@ -1,5 +1,5 @@
 # Machine Learning Process
-- [Machine Learning Process](#machine-learning-process)
+
 	- [Data Collection](#data-collection)
 		- [Questions to ask](#questions-to-ask)
 	- [Types of Data](#types-of-data)
