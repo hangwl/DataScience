@@ -148,6 +148,7 @@
 ##### Decision Trees and Random Forests
 * [Random forest - Wikipedia](https://en.wikipedia.org/wiki/Random_forest)
 * [How to visualize decision trees](https://explained.ai/decision-tree-viz/index.html)
+* [1.10. Decision Trees — scikit-learn 1.2.1 documentation](https://scikit-learn.org/stable/modules/tree.html)
 
 ##### AdaBoost/Gradient Boosting Machines
 * [A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning - MachineLearningMastery.com](https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/)
