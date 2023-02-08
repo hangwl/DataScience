@@ -5,7 +5,7 @@
 		{"id":"d14b589b2c333e10","x":-340,"y":-666,"width":250,"height":60,"color":"1","type":"text","text":"market_id"},
 		{"id":"26ecd33dc5ebd726","x":-340,"y":-760,"width":250,"height":60,"type":"text","text":"### Store Features"},
 		{"id":"d5b58466303cf880","x":-660,"y":-760,"width":250,"height":60,"type":"text","text":"### Time Features"},
-		{"id":"74ce6f5a815b3856","x":-14,"y":-666,"width":250,"height":60,"color":"1","type":"text","text":"total_items"},
+		{"id":"74ce6f5a815b3856","x":-14,"y":-666,"width":250,"height":60,"color":"4","type":"text","text":"total_items"},
 		{"id":"fde3c0d3e81b4f0f","x":-14,"y":-760,"width":250,"height":60,"type":"text","text":"### Order Features"},
 		{"id":"b8aeb701fc15e510","x":-14,"y":-606,"width":250,"height":60,"color":"1","type":"text","text":"subtotal"},
 		{"id":"d2242976ce4e027f","x":-14,"y":-546,"width":250,"height":60,"color":"1","type":"text","text":"num_distinct_items"},
@@ -16,7 +16,7 @@
 		{"id":"bac2bfe71cd6e702","x":-14,"y":-940,"width":250,"height":60,"type":"text","text":"## Data Set Features"},
 		{"id":"f6ff779eee11ec6f","x":660,"y":-606,"width":250,"height":60,"color":"4","type":"text","text":"estimated_store_to_consumer_driving_duration"},
 		{"id":"86552d9b79361329","x":660,"y":-760,"width":250,"height":60,"type":"text","text":"### Other Model Predictions"},
-		{"id":"c32372b42159a9b8","x":-660,"y":-516,"width":250,"height":60,"color":"4","type":"text","text":"actual_total_delivery_duration"},
+		{"id":"c32372b42159a9b8","x":-660,"y":-516,"width":250,"height":60,"color":"5","type":"text","text":"actual_total_delivery_duration"},
 		{"id":"1043349a17d35fa8","x":320,"y":-456,"width":250,"height":60,"color":"4","type":"text","text":"busy_dashers_ratio"},
 		{"id":"a8fe8ae0ef64360c","x":320,"y":-516,"width":250,"height":60,"color":"4","type":"text","text":"total_outstanding_orders"},
 		{"id":"36a9c334f79fd1ca","x":-340,"y":-546,"width":250,"height":60,"color":"1","type":"text","text":"store_primary_category"},
@@ -30,8 +30,9 @@
 		{"id":"fb12d5601faa068f","x":-340,"y":-45,"width":250,"height":60,"type":"text","text":"drop order_protocol_1.0"},
 		{"id":"235f43cc2ef4f2ba","x":-14,"y":-426,"width":250,"height":60,"color":"1","type":"text","text":"max_item_price"},
 		{"id":"7e4fbffa2f72a8af","x":-14,"y":-486,"width":250,"height":60,"color":"1","type":"text","text":"min_item_price"},
-		{"id":"3ec43bdec3c6c464","x":-14,"y":-336,"width":250,"height":60,"color":"4","type":"text","text":"average_subtotal_of_total_items"},
-		{"id":"e6599ee4343071e7","x":-14,"y":-250,"width":250,"height":60,"color":"4","type":"text","text":"max_min_item_price_difference"}
+		{"id":"3ec43bdec3c6c464","x":-14,"y":-336,"width":250,"height":60,"color":"4","type":"text","text":"average_price_per_item"},
+		{"id":"e6599ee4343071e7","x":-14,"y":-250,"width":250,"height":60,"color":"4","type":"text","text":"price_range_of_items"},
+		{"id":"bb19874e96b15988","x":660,"y":-516,"width":250,"height":60,"color":"3","type":"text","text":"prep_duration_prediction"}
 	],
 	"edges":[
 		{"id":"73c16d1f3059eed7","fromNode":"bac2bfe71cd6e702","fromSide":"bottom","toNode":"fde3c0d3e81b4f0f","toSide":"top"},
@@ -52,6 +53,8 @@
 		{"id":"9529e46c9479676f","fromNode":"74ce6f5a815b3856","fromSide":"left","toNode":"3ec43bdec3c6c464","toSide":"left"},
 		{"id":"29d50e409a8b6bab","fromNode":"b8aeb701fc15e510","fromSide":"left","toNode":"3ec43bdec3c6c464","toSide":"left"},
 		{"id":"0cadb758682e3277","fromNode":"235f43cc2ef4f2ba","fromSide":"left","toNode":"e6599ee4343071e7","toSide":"left"},
-		{"id":"dfa756be523f72d1","fromNode":"7e4fbffa2f72a8af","fromSide":"left","toNode":"e6599ee4343071e7","toSide":"left"}
+		{"id":"dfa756be523f72d1","fromNode":"7e4fbffa2f72a8af","fromSide":"left","toNode":"e6599ee4343071e7","toSide":"left"},
+		{"id":"bddcc3bdef1395b9","fromNode":"d26f9abc335fc79d","fromSide":"left","toNode":"bb19874e96b15988","toSide":"left"},
+		{"id":"da4b729e2fd07ae8","fromNode":"f6ff779eee11ec6f","fromSide":"left","toNode":"bb19874e96b15988","toSide":"left"}
 	]
 }
