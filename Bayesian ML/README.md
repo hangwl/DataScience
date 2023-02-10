@@ -45,7 +45,7 @@ Bayesian Networks can be used to model dependencies explicitly (as opposed to ne
 	* Also a totally different subset of ML (NLP)
 
 ## Bayes Rule and Probability Review
-https://github.com/hangwl/RegressionAnalysis/blob/master/Bayesian
+[Notes](https://github.com/hangwl/DataScience/blob/master/Bayesian%20ML/Probability%20and%20Bayes%20Review.pdf)
 ## Traditional A/B Testing
 
 ## Bayesian A/B Testing
