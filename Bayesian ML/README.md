@@ -27,7 +27,9 @@ Suppose we want to model the height of students in a class as a Gaussian (normal
 In the Frequentist approach* we first collect data of every student in the class. Then, using MLE (maximum likelihood estimation), we find the mean and variance. To do this, we first calculate the likelihood function and then maximize the likelihood with respect to the gaussian mean and variance.
 
 ### The Bayesian Approach
-In the Bayesian approach, everything is a random variable, including the mean and variance. Our job is to find their probability distributions. That is, we are more interested in finding a distribution instead of a number. That is, we want to find p(mean, variance | X).
+In the Bayesian approach, everything is a random variable, including the mean and variance. Our job is to find their probability distributions instead of point estimates. That is, we are more interested in finding a distribution instead of a number. That is, we want to find p(mean, variance | X).
+
+By working with distributions, we can find intervals of confidence (not called confidence intervals in the Bayesian approach). That is, we can ask questions like "What is the probability that A is better than B?"
 
 In the statistics route, a lot of our attention will be placed sampling methods such as importance sampling, MCMC, Gibbs, etc. The idea behind sampling methods is to do numerical approximation of an integral. Most people who talk about Monte Carlo talk about it as a technique of integration rather than a technique of statistics.
 
@@ -44,9 +46,23 @@ Bayesian Networks can be used to model dependencies explicitly (as opposed to ne
 	* It is a specific example of a Bayes net, but does not have its roots in a non-Bayesian model such as a regular Logistic Regression
 	* Also a totally different subset of ML (NLP)
 
-## Bayes Rule and Probability Review
+## Concepts Review
+
+### Bayes Rule and Probability
 [Notes](https://github.com/hangwl/DataScience/blob/master/Bayesian%20ML/Probability%20and%20Bayes%20Review.pdf)
+
+### Definition of Machine Learning
+In statistical learning, we build a model where the parameters of the model are learned from data. In MLE, we start by making a modeling assumption such as a Gaussian. We then find the parameters of the model using the data we collected. Linear regression and deep neural networks are examples of machine learning that use MLE. The broad definition of machine learning is similar, in that we aim to build a model with parameters learned and updated from data. 
+
+In 'online learning', we use models that act in real-time. Data is ingested one sample at a time, and parameters are updated each time. Thus, the algorithm becomes smarter and smarter for each subsequent datapoint that collected.
+
 ## Traditional A/B Testing
+
+### Confidence Intervals
+2 things affect our confidence in an estimate:
+1. Variance - higher variance = less confident
+2. Sample Size - larger number of samples = more confident
+
 
 ## Bayesian A/B Testing
 
