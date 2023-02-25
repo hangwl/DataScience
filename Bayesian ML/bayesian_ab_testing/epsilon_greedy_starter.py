@@ -1,3 +1,5 @@
+# epsilon-greedy starter algorithm
+
 import matplotlib.pyplot as plt
 import numpy as np
 
