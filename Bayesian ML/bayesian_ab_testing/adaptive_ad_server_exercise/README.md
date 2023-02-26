@@ -18,7 +18,7 @@ It is also important to dissect and understand how the server and client interac
 
 In the server.py file, we create:
 1. create the Bandit class to be used
-2. initialize our bandits (advertisements)
+2. instantiate our bandits (advertisements)
 3. create an app using the Flask constructor
 
 We note that the route() function of the Flask class is a decorator, which tells the app which URL should call the associated function.
