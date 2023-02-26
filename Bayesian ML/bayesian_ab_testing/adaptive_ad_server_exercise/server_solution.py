@@ -37,7 +37,8 @@ banditA = Bandit('A')
 banditB = Bandit('B')
 
 
-
+# the client sends a get request for an ad that the user will see
+# our get method should decide which ad to be shown to the user
 @app.route('/get_ad')
 def get_ad():
     if banditA.sample() > banditB.sample():
@@ -48,7 +49,8 @@ def get_ad():
         banditB.add_view()
     return jsonify({'advertisement_id': ad})
 
-
+# the client sends a post request for the ad that has been clicked
+# our post method should update the bandit accordingly
 @app.route('/click_ad', methods=['POST'])
 def click_ad():
     result = 'OK'

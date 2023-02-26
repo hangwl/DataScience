@@ -10,8 +10,12 @@ b = df[df['advertisement_id'] == 'B']
 a = a['action'].values
 b = b['action'].values
 
+# true means which are 'unknown' to us
 print("a.mean:", a.mean())
 print("b.mean:", b.mean())
+# a.mean: 0.304
+# b.mean: 0.372
+# we should expect our algorithm to show more of the advertisement with the higher ctr
 
 
 i = 0
@@ -30,7 +34,7 @@ while i < len(a) and j < len(b):
         j += 1
 
     if action == 1:
-        # only click the ad if our dataset determines that we should
+        # only click the ad if our dataset determines that we should (clicks have already been predetermined by our dataset)
         requests.post(
             'http://localhost:8888/click_ad',
             data={'advertisement_id': r['advertisement_id']}
