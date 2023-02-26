@@ -57,13 +57,37 @@ In statistical learning, we build a model where the parameters of the model are 
 In 'online learning', we use models that act in real-time. Data is ingested one sample at a time, and parameters are updated each time. Thus, the algorithm becomes smarter and smarter for each subsequent datapoint that collected.
 
 ## Traditional A/B Testing
+Traditional A/B testing makes use of the Frequentist approach using point estimates to model a population's distribution.
+We typically decide on how much data samples to collect beforehand, but prior to experimentation, it may be difficult to determine the power and effect size to do so.
+
+Essentially, we are concerned with constructing confidence intervals to test our alternative hypothesis.
+The p-value tells us whether the our alternative hypothesis is statistically significant, given a set level of significance (significance threshold).
+It is the probability to reject the null when the null is true, or how likely that the data observed is to have occurred under the null hypothesis.
+So, for example given a p-value of 0.03 < 5%, we should reject the null in favour of the alternative.
+
+However, the definition of p-value is sometimes misleading.
+For example if a p-value was instead 0.10 > 5%, we say that there is insufficient evidence to reject the null.
+It is important to note that this does not imply that the null is true.
 
 ### Confidence Intervals
 2 things affect our confidence in an estimate:
 1. Variance - higher variance = less confident
 2. Sample Size - larger number of samples = more confident
 
-
 ## Bayesian A/B Testing
+Addressing the explore-exploit dilemma.
 
-## Bayesian A/B Testing Extension
+Suppose our goal is to find out which advertisement generates higher clicks, and then subsequently show more of that advertisement.
+It is not practical to conduct a traditional Frequentist statistical AB test which predetermines the number of samples to be used.
+Exploration is costly and any statistical experiment that is prematurely stopped will be invalidated.
+So, the better approach would be to find an optimal balance between exploration and exploitation.
+
+In the Bayesian Bandits (Thompson Sampling) approach, we can model and compare the distribution of true means.
+To do this, we can make use of conjugate priors that take advantage of proportionality to find the distribution of the posterior.
+That is, given our likelihood (bernoulli in the case of CTRs), we can search for its respective conjugate prior that has the same distribution.
+By proportionality, the posterior will also have the same distribution.
+
+Here is how our experiment runs in real-time:
+When a user browses the website, a posterior sample is drawn from each bandit.
+The bandit with the larger valued sample will be selected, and the respective advertisement will be shown to attempt to maximize our reward.
+Thereafter, we log whether or not the user has clicked on the advertisement, and we update our posterior accordingly.
