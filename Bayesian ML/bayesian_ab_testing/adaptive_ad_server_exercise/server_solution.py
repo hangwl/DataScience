@@ -16,7 +16,8 @@ class Bandit:
         self.name = name
 
     def sample(self):
-        # Beta(1, 1) is the prior
+        # since we have no idea what the true ctr is, we can assign equal probabilities to each possible value [0,1] 
+        # which is the uniform distribution equal to Beta(1, 1) we use to initialize as the prior 
         a = 1 + self.clks
         b = 1 + self.views - self.clks
         return np.random.beta(a, b)
