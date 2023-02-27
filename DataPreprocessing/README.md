@@ -79,20 +79,20 @@ This involves dealing with datasets where the number of examples in each class i
 1. Understand the data and check the number of samples in each class, identifying the minority class, and determining the level of imbalance
 2. Resample (oversample/undersample) the data. 
 	Oversampling methods involve adding new samples to the minority class while undersampling methods involve removing samples from the majority class. Some common oversampling and undersampling methods are:
-		  - Random Sampling
-			  - Randomly duplicate samples from the minority class to balance the classes
-		  - SMOTE
-			  - Generate new synthetic samples from the minority class during interpolation methods
-		  - Random Undersampling
-			  - Randomly remove samples from the majority class to balance the classes
-		  - Tomek links
-			  - Identify pairs of samples that are nearest neighbors of different classes and remove the majority class sample
-		  - Edited nearest neighbor
-			  - Remove samples from the majority class that are misclassified by their nearest neighbors in the minority class
+	  - Random Sampling
+		  - Randomly duplicate samples from the minority class to balance the classes
+	  - SMOTE
+		  - Generate new synthetic samples from the minority class during interpolation methods
+	  - Random Undersampling
+		  - Randomly remove samples from the majority class to balance the classes
+	  - Tomek links
+		  - Identify pairs of samples that are nearest neighbors of different classes and remove the majority class sample
+	  - Edited nearest neighbor
+		  - Remove samples from the majority class that are misclassified by their nearest neighbors in the minority class
 3. Ensemble methods involve creating multiple models and combining their predictions.
 	Some common ensemble methods are:
-		- Bagging
-		- Boosting
-		- Weighted Models
+	- Bagging
+	- Boosting
+	- Weighted Models
 4. Evaluation Metrics
 	Traditional evaluation metrics like accuracy can be misleading when dealing with imbalanced data. It is important to use metrics like precision, recall, F1-score, and AUC-ROC that take into account the class distribution.
