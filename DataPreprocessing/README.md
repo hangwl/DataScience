@@ -63,12 +63,10 @@ This involves splitting the data into training, validation and test sets, and us
 
 1. Choose a cross-validation strategy based on the size of the dataset and the goals of the analysis.
 	-  strategies include k-fold cross-validation, stratified k-fold cross-validation, leave-one-out cross-validation, and nested cross-validation
-2. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds.
+2. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds. For each fold:
 
- For each fold:
-
-	- Train the model on the remaining k-1 folds
-	- Evaluate the model on the held-out fold and record the performance metric(s) of interest
+		- Train the model on the remaining k-1 folds
+		- Evaluate the model on the held-out fold and record the performance metric(s) of interest
 
 3. Repeat the cross-validation process k times, with each fold serving as the held-out fold once
 4. Compute the average performance metric(s) over the k runs to obtain an estimate of the model's performance on unseen data
