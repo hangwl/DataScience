@@ -61,9 +61,10 @@ This involves splitting the data into training, validation and test sets, and us
 	- validation set is used to tune hyperparameters and prevent overfitting
 	- test set is used to evaluate the final performance of the model
 
-1. Choose a cross-validation strategy based on the size of the dataset and the goals of the analysis.
-	-  strategies include k-fold cross-validation, stratified k-fold cross-validation, leave-one-out cross-validation, and nested cross-validation
-2. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds. For each fold:
+1. Choose a cross-validation strategy based on the size of the dataset and the goals of the analysis. 
+	Strategies include k-fold cross-validation, stratified k-fold cross-validation, leave-one-out cross-validation, and nested cross-validation
+2. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds. 
+	For each fold:
 
 		- Train the model on the remaining k-1 folds
 		- Evaluate the model on the held-out fold and record the performance metric(s) of interest
@@ -74,5 +75,24 @@ This involves splitting the data into training, validation and test sets, and us
 6. Evaluate the final model on the test set to obtain an unbiased estimate of its performance on completely unseen data
 
 ### Handling imbalanced data: 
-This involves dealing with datasets where the number of examples in each class is not equal. Techniques like oversampling, undersampling, and generating synthetic examples can be used to address this issue.
-	
+This involves dealing with datasets where the number of examples in each class is not equal and the model tends to be biased towards the majority class. Techniques like oversampling, undersampling, and generating synthetic examples can be used to address this issue.
+1. Understand the data and check the number of samples in each class, identifying the minority class, and determining the level of imbalance
+2. Resample (oversample/undersample) the data. 
+	Oversampling methods involve adding new samples to the minority class while undersampling methods involve removing samples from the majority class. Some common oversampling and undersampling methods are:
+		  - Random Sampling
+			  - Randomly duplicate samples from the minority class to balance the classes
+		  - SMOTE
+			  - Generate new synthetic samples from the minority class during interpolation methods
+		  - Random Undersampling
+			  - Randomly remove samples from the majority class to balance the classes
+		  - Tomek links
+			  - Identify pairs of samples that are nearest neighbors of different classes and remove the majority class sample
+		  - Edited nearest neighbor
+			  - Remove samples from the majority class that are misclassified by their nearest neighbors in the minority class
+3. Ensemble methods involve creating multiple models and combining their predictions.
+	Some common ensemble methods are:
+		- Bagging
+		- Boosting
+		- Weighted Models
+4. Evaluation Metrics
+	Traditional evaluation metrics like accuracy can be misleading when dealing with imbalanced data. It is important to use metrics like precision, recall, F1-score, and AUC-ROC that take into account the class distribution.
