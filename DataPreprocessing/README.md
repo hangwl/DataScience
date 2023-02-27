@@ -49,21 +49,27 @@ This involves scaling and normalizing the data to ensure that all features are o
 
 ### Data augmentation
 This involves creating new data points by applying various transformations to existing data points. This can help to increase the size of the training set and improve model performance.
-	`- e.g. apply random rotations to images
+
+	- e.g. apply random rotations to images
 	- This can help the model to better recognize the animals even when they are in different orientations
 	- This can help to improve the generalization ability of our model and prevent overfitting
-`
+
 ### Data splitting and cross-validation
 This involves splitting the data into training, validation and test sets, and using techniques like k-fold cross-validation to estimate model performance.
+
 	- training set is used to fit the model
 	- validation set is used to tune hyperparameters and prevent overfitting
 	- test set is used to evaluate the final performance of the model
+
 1. Choose a cross-validation strategy based on the size of the dataset and the goals of the analysis.
 	-  strategies include k-fold cross-validation, stratified k-fold cross-validation, leave-one-out cross-validation, and nested cross-validation
-1. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds.
-	For each fold:
-		- Train the model on the remaining k-1 folds
-		- Evaluate the model on the held-out fold and record the performance metric(s) of interest
+2. Implement the chosen cross-validation strategy by splitting the training set into k folds and iterating over the folds.
+
+ For each fold:
+
+	- Train the model on the remaining k-1 folds
+	- Evaluate the model on the held-out fold and record the performance metric(s) of interest
+
 3. Repeat the cross-validation process k times, with each fold serving as the held-out fold once
 4. Compute the average performance metric(s) over the k runs to obtain an estimate of the model's performance on unseen data
 5. Once the best model is selected, retrain it on the entire training set (without using the validation set)
