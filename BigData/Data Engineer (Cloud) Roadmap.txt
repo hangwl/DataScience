@@ -1,0 +1,49 @@
+Data Engineer (Cloud) Roadmap
+
+Python and SQL
+
+python:
+for/while loops
+if-else statements
+functions
+object-oriented programming
+functional programming
+airflow
+making request apis
+api pagination
+focus on being able to write baseline code
+
+sql:
+basics
+poke on data sets on e.g. Google bigquery
+subqueries
+views
+how to use analytical functions
+practice on HackerRank/LeetCode
+
+Data Warehousing and Data Pipelines
+read up on concepts
+pick one to experiment with: aws, azure, google cloud
+be aware of annoying nuances and learn how to interact with these things: 
+how to set up an RDS instance, vpns, firewalls to access data
+
+now that i have learnt how to model data, how to write code, we can take all of this and build it on the cloud again, further iterating on my skills 
+play around with online apis, take those apis, parse the data pull it out (lambda/mwaa), setup airflow manually on a cloud instance,
+take data pull it out and push it to some sort of RDS instance (redshift/snowflake), load that in and start playing with it (build a dashboard off of it in the cloud)
+
+MongoDB and MySQL
+
+
+Docker and Kubernetes
+see docker and kubernetes practical guide
+
+Other things that are good to know
+
+
+Spark
+taming Big Data with python and spark
+
+Linux Commandline
+
+Snowflake Databricks
+

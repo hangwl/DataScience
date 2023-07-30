@@ -44,3 +44,4 @@ Spark is faster and more versatile than Hadoop, with support for real-time proce
 
     Hadoop has a large and mature ecosystem of tools and applications, including Pig, Hive, and HBase. Spark has a smaller ecosystem but is rapidly growing and has already gained popularity for real-time stream processing and machine learning applications.
 
+### Databricks vs Snowflake
